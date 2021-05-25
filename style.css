@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+
+.attribution { font-size: 11px; text-align: center; margin-top: 2rem; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+body{
+    background-color: hsl(240, 78%, 98%);
+    background-image: url(images/bg-top.svg);
+    background-position-x: 150%;
+    background-position-y: 0;
+    background-repeat: no-repeat;
+    background-size: 20rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    color: hsl(232, 13%, 33%);
+    min-width: 17rem;
+}
+
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 15rem;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    min-width: 15rem;
+    padding: 2rem 0;
+}
+
+.switch-label-annually{
+    font-weight: 500;
+    font-size: 0.8rem;
+    position: relative;
+    right: 4rem;
+    top:1.2rem;
+}
+.switch-label-monthly{
+    font-weight: 500;
+    font-size: 0.8rem;
+    position: relative;
+    left: 4rem;
+    bottom:1.2rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+  }
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:hsl(238, 56%, 87%);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  
+input:checked + .slider {
+    background-color:hsl(236, 69%, 76%);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px hsl(237, 63%, 64%);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
+  }
+  
+.card{
+    min-width: 15rem;
+    margin: 2rem 1rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    background-color: white;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.5rem 1rem hsla(228, 72%, 79%, 0.5);
+}
+
+.dollar-sign{
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.price{
+    font-size: 3.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+
+ul{
+    padding: 0 0 2rem 0;
+    margin: 0 auto;
+}
+
+li{    
+    list-style: none;
+    border-bottom: 1px solid rgb(185, 184, 184);
+    padding: 1.5rem;
+}
+
+button{
+    width: 100%;
+    padding: 0.9rem 0;
+    border-radius: 0.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#basic button,
+#master button{
+    background-image: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    border: 1px solid white;
+    color: white;
+}
+
+#basic button:hover,
+#master button:hover{
+    color:hsl(237, 63%, 64%);
+    background-image: none;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem hsla(228, 72%, 79%, 0.5);
+    border: 1px solid hsl(237, 63%, 64%);
+}
+
+#professional button{
+    color:hsl(236, 72%, 79%);
+    border: 1px solid hsl(236, 72%, 79%);
+}
+
+#professional button:hover{
+    background-image: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    color: white;
+    border: 1px solid white;
+    box-shadow: 0 0.5rem 1rem hsla(228, 72%, 79%, 0.5);
+}
+
+#professional{
+    background-image: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    color: white;
+}
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: static;
+}
+
+
+@media screen and (min-width: 800px){
+
+    body{
+        background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+        background-position-x: 100%, 0;
+        background-position-y: 0, 100%;
+    }
+    
+    .main-container{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .price{
+        font-size: 3,5rem;
+    }
+
+    .card{
+        min-width: 20rem;
+        margin: 1rem 0;
+    }
+
+    #professional{
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 1.9rem;
+        
+    }
+
+}
