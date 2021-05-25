@@ -21,8 +21,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 monthlyPrice.classList.add('hidden')
                 monthlyPrice.classList.remove('visible')
             })
-                // annualPrice.classList.toggle('hidden')
-                console.log(annualPrice)
            })
         }
     })
